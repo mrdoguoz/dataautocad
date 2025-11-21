@@ -3,8 +3,8 @@
 AutoCAD DWG/DXF dosyalarını ve destekleyici belgeleri toplayıp e-posta ile ileten web uygulaması. Kullanıcılar dosyalarını yükleyip iletişim bilgilerini girerek metraj talebi oluşturabilir.
 
 ## 🌐 Canlı Demo
-- **Frontend:** https://mrdoguoz.github.io/dataautocad/
-- **Backend API:** https://dataautocad-backend.onrender.com
+- **Web Sitesi:** https://dataautocad.vercel.app
+- **Backend API:** https://dataautocad.vercel.app/api/contact-upload
 
 ## Ön yüz
 1. `C:\autocad_onyuz\index.html` dosyasını tarayıcıda açın veya bir canlı sunucu ile servis edin.
@@ -35,37 +35,30 @@ AutoCAD DWG/DXF dosyalarını ve destekleyici belgeleri toplayıp e-posta ile il
 
 ## 🚀 Deployment
 
-### Frontend (GitHub Pages)
-Frontend otomatik olarak GitHub Pages üzerinden yayınlanır:
-1. Repository Settings > Pages
-2. Source: Deploy from a branch
-3. Branch: `main` / `root`
-4. URL: https://mrdoguoz.github.io/dataautocad/
+### Full Stack Deployment (Vercel)
+Hem frontend hem backend tek platformda yayınlanır - **KREDİ KARTI GEREKMİYOR**
 
-### Backend (Render)
-Backend Render.com üzerinde ücretsiz hosting ile çalışır:
+### Backend (Vercel - Kredi Kartı Gerektirmez)
+Backend Vercel üzerinde ücretsiz hosting ile çalışır:
 
-1. [Render.com](https://render.com) hesabı oluşturun
-2. "New +" > "Web Service" seçin
-3. GitHub repository'nizi bağlayın: `mrdoguoz/dataautocad`
-4. Ayarlar:
-   - **Name:** dataautocad-backend
-   - **Root Directory:** backend
-   - **Environment:** Node
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-5. Environment Variables ekleyin:
+1. [Vercel.com](https://vercel.com) adresine gidin
+2. "Sign Up" ile GitHub hesabınızla giriş yapın (kredi kartı istemez)
+3. "Add New..." > "Project" seçin
+4. `mrdoguoz/dataautocad` repository'sini seçin
+5. "Deploy" butonuna tıklayın (otomatik deploy başlar)
+6. Deploy tamamlandıktan sonra "Settings" > "Environment Variables" bölümüne gidin
+7. Şu değişkenleri ekleyin:
    ```
-   SMTP_HOST=smtp.gmail.com
-   SMTP_PORT=587
-   SMTP_USER=ddataautocad@gmail.com
-   SMTP_PASS=pjucqwqzblcldcup
-   SMTP_FROM=ddataautocad@gmail.com
-   MAIL_TO=mrdoguoz@gmail.com
-   ALLOWED_ORIGINS=https://mrdoguoz.github.io
+   SMTP_HOST = smtp.gmail.com
+   SMTP_PORT = 587
+   SMTP_USER = ddataautocad@gmail.com
+   SMTP_PASS = pjucqwqzblcldcup
+   SMTP_FROM = ddataautocad@gmail.com
+   MAIL_TO = mrdoguoz@gmail.com
+   ALLOWED_ORIGINS = https://dataautocad.vercel.app
    ```
-6. "Create Web Service" butonuna tıklayın
+8. "Deployments" sekmesinden "Redeploy" yapın
 
-⚠️ **Önemli:** Render ücretsiz planında 15 dakika hareketsizlik sonrası servis uyur. İlk istek 30-60 saniye sürebilir.
+✅ **Avantajlar:** Kredi kartı yok, hızlı, her zaman aktif (uyumaz)
 
 ## 🔧 Lokal Geliştirme
