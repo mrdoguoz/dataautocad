@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autocad Metraj – Dosya Yükleme</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <img src="assets/logo.png" alt="Autocad Metraj" class="logo" />
+        <div>
+          <p class="eyebrow">Autocad Metraj</p>
+          <h1>DWG / DXF çiziminizi paylaşın</h1>
+          <p class="subtitle">
+            Adınızı, iletişim bilgilerinizi ve en fazla 2&nbsp;MB boyutunda bir Autocad
+            dosyasını gönderin. Sistem dosyayı yerel backend'e iletip size e-posta
+            olarak aktarır.
+          </p>
+        </div>
+      </header>
+
+      <main class="card">
+        <form id="contact-form" class="form" novalidate>
+          <label class="field">
+            <span>Ad Soyad</span>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Adınız Soyadınız"
+              autocomplete="name"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>E-posta</span>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="ornek@domain.com"
+              autocomplete="email"
+              required
+            />
+            <small class="hint">Yanıtlarımız bu adrese gönderilecektir.</small>
+          </label>
+
+          <label class="field">
+            <span>Telefon (opsiyonel)</span>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="05xx xxx xx xx"
+              autocomplete="tel"
+            />
+          </label>
+
+          <label class="field">
+            <span>Mesaj</span>
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              placeholder="Talebinizi kısaca anlatın"
+            ></textarea>
+          </label>
+
+          <label class="field">
+            <span>DWG / DXF Dosyası</span>
+            <input
+              type="file"
+              name="file"
+              id="file"
+              accept=".dwg,.dxf,.zip,.pdf,.png,.jpg,.jpeg,application/dwg,application/dxf,image/vnd.dwg"
+              required
+            />
+            <small class="hint">Maksimum 2 MB, DWG / DXF veya destekleyici formatlar.</small>
+          </label>
+
+          <button type="submit" id="submit-btn">Gönder</button>
+        </form>
+
+        <div id="status-message" class="message" role="status" aria-live="polite"></div>
+      </main>
+
+      <footer class="footnote">
+        Yanıtlarımız kayıtlı e-posta adresinize gelir. Sorun yaşarsanız
+        <a href="mailto:mrdoguoz@gmail.com">mrdoguoz@gmail.com</a> adresine ulaşın.
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

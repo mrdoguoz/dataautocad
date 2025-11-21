@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autocad Metraj – İş Durumu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <img src="assets/logo.png" alt="Autocad Metraj" class="logo" />
+        <div>
+          <p class="eyebrow">İş Durumu</p>
+          <h1>Üretilen İş Kimliğinizi Saklayın</h1>
+          <p class="subtitle">
+            Bu sayfa yalnızca istemci tarafıdır. Backend, verdiğimiz iş ID'sine
+            göre durumu sağlayacaktır. Siz de bu kimliği paylaşarak süreci
+            takip edebilirsiniz.
+          </p>
+        </div>
+      </header>
+
+      <main class="card">
+        <section>
+          <h2>Son İşlem</h2>
+          <p id="job-result" class="message"></p>
+          <button id="copy-btn" class="ghost" type="button">İş ID'sini Kopyala</button>
+        </section>
+
+        <section class="history">
+          <h3>Geçmiş İşler</h3>
+          <ul id="history-list" class="history-list"></ul>
+        </section>
+      </main>
+
+      <footer class="footnote">
+        Yükleme ekranına dönmek için <a href="index.html">buraya tıklayın</a>.
+      </footer>
+    </div>
+
+    <script src="status.js"></script>
+  </body>
+</html>
