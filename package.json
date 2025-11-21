@@ -1,0 +1,12 @@
+{
+  "name": "dataautocad",
+  "version": "1.0.0",
+  "description": "AutoCAD data extraction web application",
+  "scripts": {
+    "dev": "cd backend && npm start"
+  },
+  "dependencies": {
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.8"
+  }
+}
